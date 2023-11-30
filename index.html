@@ -1,11 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>CodePen - Turbo Bun Toggle</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <h1>Hello World</h1>
+<!-- partial:index.partial.html -->
+<input type="checkbox" id="toggle" />
+<label for="toggle">
+  
+  <div class="toggle">
+    <div class="toggle__head"></div>
+    <div class="toggle__ear toggle__ear--left"></div>
+    <div class="toggle__ear toggle__ear--right"></div>
+    <div class="toggle__ear toggle__ear--left toggle__ear--clone"></div>
+    <div class="toggle__ear toggle__ear--right toggle__ear--clone"></div>
+    <div class="toggle__face">
+      <div class="toggle__eyes">
+        <div class="toggle__eye toggle__eye--left"></div>
+        <div class="toggle__eye toggle__eye--right"></div>
+      </div>
+      <div class="toggle__mouth"></div>
+    </div>
+    <div class="toggle__label">BUN<br />FROG</div>
+    <div class="toggle__scribble"></div>
+  </div>
+  <svg>
+    <filter id="scribble--0">
+      <feturbulence basefrequency="0.02" numoctaves="3" result="noise" seed="0"></feturbulence>
+      <fedisplacementmap id="displacement" in="SourceGraphic" in2="noise" scale="2"></fedisplacementmap>
+    </filter>
+    <filter id="scribble--1">
+      <feturbulence basefrequency="0.02" numoctaves="3" result="noise" seed="1"></feturbulence>
+      <fedisplacementmap in="SourceGraphic" in2="noise" scale="3"></fedisplacementmap>
+    </filter>
+    <filter id="scribble--2">
+      <feturbulence basefrequency="0.02" numoctaves="3" result="noise" seed="2"></feturbulence>
+      <fedisplacementmap in="SourceGraphic" in2="noise" scale="2"></fedisplacementmap>
+    </filter>
+    <filter id="scribble--3">
+      <feturbulence basefrequency="0.02" numoctaves="3" result="noise" seed="3"></feturbulence>
+      <fedisplacementmap in="SourceGraphic" in2="noise" scale="3"></fedisplacementmap>
+    </filter>
+    <filter id="scribble--4">
+      <feturbulence basefrequency="0.02" numoctaves="3" result="noise" seed="4"></feturbulence>
+      <fedisplacementmap in="SourceGraphic" in2="noise" scale="2"></fedisplacementmap>
+    </filter>
+  </svg>
+</label>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
 </body>
 </html>
